@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+  	font: 1em normal  cormorant-garamond,serif;
+	
+    background-color: #6fffac;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+	margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 82%;
+    margin: 0 auto;
+}
+.clear{
+	clear: both;
+}
+
+#topnav {
+
+   padding-top: 20px;
+   list-style: none;   
+   font-size: 1.2em;
+   clear: both;
+   float: left;
+ width: 82%;
+	background-color: #ff5656; 
+height: 60px;
+	position: fixed;
+	top: 0;
+}
+
+ul#topnav li{
+	
+   margin: 0 ; 
+   padding: 0; 
+   overflow: hidden; 
+   float: left; 
+   height:40px;
+	width: 20%;
+}
+ul#topnav a, ul#topnav span {
+   padding: 10px 40px; 
+   float: left; 
+   text-decoration: none; 
+   color: white;
+   clear: both;
+   height: 20px;
+   line-height: 20px;
+   background: #ff5656;
+	
+}
+
+ul#topnav span {
+   display: none;
+}
+ul#topnav.v2 span{
+   background: url(images/a_bg.gif) repeat-x left top;
+}
+ul#topnav.v2 a{
+   color: #6fffac;
+   background: url(images/a_bg.gif) repeat-x left bottom;
+}
+
+
+
+#gallery{
+	padding-top: 100px;
+	margin-bottom: 30px;
+}
+#gallery ul li{
+	list-style: none;
+	float: left;
+	margin: 10px 10px;
+	
+}
+#gallery ul img{
+	border-radius: 5px;
+}
+#gallery li p{
+	text-align: center;
+	color: black;
+	margin-top: 5px;
+}
+#gallery ul li{
+	margin-bottom: 50px;
+}
+.borderr{
+	border: 2px solid #ff5656;
+
+}
+
+h1{
+	font-size: 35px;
+}
+#gallery h1, #gallery h2 {
+	font-style: italic;
+	text-align: center;
+}
+p.exp{
+	text-align: center;
+}
+#gallery #description{
+	text-align: center;
+}
+/************rent**************/
+.bdy {
+	font-style: italic;
+	padding-left: 30px;
+	margin-top: 100px;
+}
+.bdy p {
+	font-size: 18px;
+	font-weight: bold;
+	margin-left: 10px;
+	line-height: 1.5;
+}
+
+.bdy div{
+	margin-left: 30px;
+}
+
+/**************appoinment****************/
+#appoinment{
+	text-align: center;
+
+}
+#appoinment input{
+	margin: 10px;
+}
+
+/*****************footer*********/
+footer{
+    background-color: #ff5656;
+    height: 70px;
+    padding-top: 10px;
+  	margin-top: 30px;
+
+}
+footer p{
+    font-size: 14px;
+    margin:10px 0 10px 20px;
+    text-align: center;
+	color: white;
+
+}
