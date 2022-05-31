@@ -23,7 +23,7 @@ ul,li,h1,h2,h3,p{
 header{
     background-image: url(../images/header3.jpg);
     height: 590px;
-    opacity: 0.7;
+    //opacity: 0.7;
   color: rgb(208, 33, 154); 
 }
 header p{
