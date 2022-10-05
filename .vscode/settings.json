@@ -1,0 +1,7 @@
+{
+  "liveServer.settings.port": 5501,
+  "files.autoSave": "onFocusChange",
+  "workbench.colorTheme": "Default Light+",
+  "workbench.preferredHighContrastLightColorTheme": "Default Light+",
+  "workbench.preferredLightColorTheme": "Visual Studio Light"
+}

@@ -4,6 +4,9 @@
 body {
   font-family: serif;
 }
+* {
+  box-sizing: border-box;
+}
 ul,
 li,
 h1,
@@ -31,10 +34,11 @@ header {
 
   color: rgb(208, 33, 154);
 }
-header p {
+#home p {
   padding: 50px 50px 20px 25px;
   font-size: 18px;
 }
+
 header #title {
   font-size: 40px;
   padding: 0px 0px 20px 25px;
@@ -57,15 +61,16 @@ header #subtitle {
   display: inline-block;
   margin: auto;
   padding: 15px 30px;
+  opacity: 1;
 }
 .navigation li a {
   font-size: 22px;
-  // text-align: center;
+  text-align: center;
   text-decoration: none;
   color: #d0219a;
 }
 .navigation li a:hover {
-  //   text-decoration: underline;
+  text-decoration: underline;
   color: black;
 }
 
@@ -77,20 +82,13 @@ header #subtitle {
   text-align: center;
 }
 .split {
+  border-image: url(../images/section-divider.jpg);
+  border-image-width: 50px;
+  background-image: url(../images/section-divider.jpg);
   border-top: 100px;
 
   border-bottom: 3px #cfcfed;
   border-bottom-style: double;
-}
-.subhead-sec {
-  color: #bf20cc;
-  font-size: 22px;
-  padding-bottom: 20px;
-}
-#about p {
-  color: #7c7675;
-  font-size: 18px;
-  line-height: 1.3;
 }
 
 /* education*/
@@ -99,12 +97,15 @@ header #subtitle {
   list-style-type: square;
   line-height: 2;
 }
-#education li {
-  color: #696160;
-  font-size: 18px;
+
+#tabs ul {
+  padding: 0;
 }
-#education li p {
-  font-size: 15px;
+#tabs-1 ul li,
+#tabs-2 ul li {
+  color: #bf20cc;
+  font-size: 18px;
+  padding-bottom: 20px;
 }
 /*resume */
 #resume {
@@ -112,48 +113,24 @@ header #subtitle {
   font-size: 18px;
   margin-bottom: 30px;
 }
-#resume article {
-  background: #8af06c;
-  margin: 5px;
-  border-radius: 10px;
-  width: 600px;
-  padding: 10px;
+#inner {
+  margin-left: 30px;
 }
-#resume .head-article {
-  font-size: 18px;
-  font-weight: bold;
-  color: #817a79;
-}
-#resume article ul {
-  padding: 15px 0px 10px 40px;
-  line-height: 1.3;
-}
-#resume article p {
+#resume p {
   font-size: 18px;
   line-height: 1.5;
+  font-style: italic;
 }
-#resume .right-article {
-  position: relative;
-  float: right;
+#accordion {
+  width: 60%;
+  margin: 0 auto;
+  background-color: #deedcf;
 }
-/* skills*/
-#skill {
-  background: #464548;
-  height: 600px;
-  color: white;
-  text-align: center;
+#accordion div,
+p,
+li {
+  color: #bf20cc;
   font-size: 18px;
-}
-#skill .head-sec {
-  color: white;
-}
-#skill meter {
-  width: 500px;
-  height: 30px;
-  margin: 10px 20px;
-}
-#skill li {
-  list-style: none;
 }
 
 /* works*/
@@ -164,15 +141,12 @@ header #subtitle {
 #works .head-sec {
   color: white;
 }
-#works .project {
-  width: 800px;
-  margin: auto;
-  height: 450px;
+#click {
+  margin: 20px;
+  font-size: 20px;
+  color: white;
 }
-#works .project img {
-  height: 400px;
-  width: 800px;
-}
+
 /*contact */
 #contact p {
   color: #918b8a;
@@ -192,18 +166,105 @@ footer p {
   color: white;
 }
 
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+#slide1 {
+  display: block;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* ---------responsive web----------------- */
 /* for mobile phone */
 @media screen and (max-width: 400px) {
   .container {
-    // margin: auto;
+    margin: auto;
     width: 98%;
   }
 
   .open-menu {
     font-size: 25px;
     padding: 5px;
-    // background: red;
+    background: red;
     display: block;
   }
   header {
@@ -244,8 +305,8 @@ footer p {
     color: white;
   }
   .head-sec {
-    font-size: 25px;
-    padding: 20px 0px 5px 0px;
+    font-size: 22px;
+    padding: 10px 0px 5px 0px;
     text-align: center;
   }
   .subhead-sec {
@@ -258,19 +319,22 @@ footer p {
     line-height: 1.5;
   }
   /* education*/
-  #education ul {
-    padding: 0px 0px 10px 20px;
-    list-style-type: square;
-    line-height: 1.5;
+  #tabs-1 ul li,
+  #tabs-2 ul li {
+    color: #bf20cc;
+    font-size: 12px;
+    padding-bottom: 15px;
   }
-  #education li {
-    color: #918b8a;
-    font-size: 18px;
-  }
-  #education li p {
-    font-size: 15px;
+
+  .hoverTab {
+    background-color: aquamarine;
   }
   /*resume */
+  #accordion {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #deedcf;
+  }
   #resume {
     color: #7c7675;
     font-size: 14px;
@@ -285,27 +349,15 @@ footer p {
     font-size: 16px;
     color: #817a79;
   }
-  #resume article ul {
+  #resume ul {
     padding: 5px 0px 5px 20px;
     line-height: 1.5;
   }
-  #resume article p {
+  #resume p {
     font-size: 14px;
     line-height: 1.5;
   }
-  #resume .right-article {
-    float: none;
-  }
-  /* skills*/
-  #skill {
-    height: 420px;
-    font-size: 16px;
-  }
-  #skill meter {
-    width: 80%;
-    height: 10px;
-    margin: 10px 5px;
-  }
+
   /* works*/
   #works .project {
     width: 90%;
@@ -331,4 +383,4 @@ footer p {
     padding: 10px;
     font-size: 16px;
   }
-} //end of media
+}

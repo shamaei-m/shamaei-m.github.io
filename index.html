@@ -4,24 +4,23 @@
     <meta charset="utf-8" />
     <meta name="veiwport" content="width=device-width, initial-scale=1.0" />
     <title>Maryam Shamaei</title>
+    <link rel="stylesheet" href="styles/jquery-ui.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <script src="JS/typed.min.js"></script>
     <script
       src="https://kit.fontawesome.com/3fbde99713.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" type="text/css" href="JS/slick/slick.css" />
-
-    <link rel="stylesheet" type="text/css" href="JS/slick/slick-theme.css" />
-    <script src="JS/typed.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".open-menu").click(function () {
-          $(".navigation").slideToggle();
-        });
-      });
-    </script>
+
+    <script src="JS/jquery-3.6.0.min.js"></script>
+    <script src="JS/jquery-ui.min.js"></script>
+    <script src="JS/Slideshow.js"></script>
+    <script src="JS/Script.js"></script>
+    <script src="JS/tabs.js"></script>
+    <script src="JS/accordion.js"></script>
   </head>
 
   <body>
@@ -30,10 +29,8 @@
       <div class="container">
         <ul class="navigation">
           <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
           <li><a href="#works">My Project</a></li>
           <li><a href="#resume">Work Experience</a></li>
-
           <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -43,108 +40,96 @@
     <header id="home">
       <p>I am</p>
       <h1 id="title"><span id="t1"></span></h1>
-      <h2 id="subtitle">
-        I am a creative web designer & developer.<br />
-        I am capble of building a responsible web.
-      </h2>
+      <!--<h2 id="subtitle">A creative web designer & developer.<br /></h2>  -->
     </header>
 
-    <section id="about">
-      <div class="container">
-        <h2 class="head-sec">About</h2>
-        <hr class="split" />
-        <h3 class="subhead-sec">OBJECTIVE</h3>
-        <p>
-          A creative thinker, responsible and quick learner web developer.
-          Proficient with JavaScript, Java, PHP, HTML5 and CSS3. Familier with
-          MySQL, Wordpress and GitHub. Have the jQuery certificate from BCIT.
-          Skilled in writing well-designed, clean and efficient code. Interested
-          in learning new methods and technologies in web development.
-        </p>
-      </div>
-    </section>
     <section id="works">
       <div class="container">
         <h2 class="head-sec">My Project</h2>
         <hr class="split" />
-        <div class="project">
-          <div>
+        <div id="click">Click on the picture to see the website complately</div>
+        <div class="slideshow-container">
+          <div id="slide1" class="mySlides fade">
             <a href="https://shamaei-m.github.io/BrideGallery/"
-              ><img src="images/p4.jpg" alt="" width="800" height="400"
+              ><img src="images/p4.jpg" alt="BrideGallery" style="width: 100%"
             /></a>
+            <div class="text">Caption Text</div>
           </div>
-          <div>
+          <div class="mySlides fade">
             <a href="https://shamaei-m.github.io/TopVancouver/">
-              <img src="images/p3.jpg" alt="" width="800" height="400"
+              <img src="images/p3.jpg" alt="Restaurant" style="width: 100%"
             /></a>
+            <div class="text">Caption Text</div>
           </div>
-          <div>
-            <a href="https://shamaei-m.github.io/Bijan">
-              <img src="images/p2.jpg" alt="" width="800" height="400" />
+          <div class="mySlides fade">
+            <a href="https://shamaei-m.github.io/Bijan/">
+              <img src="images/p2.jpg" alt="Bijan" style="width: 100%" />
             </a>
           </div>
-          <div>
+          <div class="mySlides fade">
             <a href="https://shamaei-m.github.io/Blogfa/">
-              <img src="images/project2.jpg" alt="" width="800" height="400" />
+              <img src="images/project2.jpg" alt="Blogfa" style="width: 100%" />
             </a>
           </div>
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
       </div>
+      <br />
+      <!-- The dots/circles -->
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
     </section>
+    <div class="clear"></div>
     <section id="resume">
       <div class="container">
         <h2 class="head-sec">Work Experience</h2>
-        <hr class="split" />
-        <h3 class="subhead-sec"></h3>
-        <article>
-          <p class="head-article">Faculty member</p>
-          <p>Islamic Azad University, Iran| Aug 2009 to Mar 2018</p>
-          <ul>
-            <li>Developed the websites by PHP, HTML, CSS</li>
-            <li>
-              Improved web design skills by instructing practically in create a
-              website from A to Z for 20+ students/semester
-            </li>
-            <li>Supervised and examined students' project work</li>
-            <li>
-              Taught some lessons such as:
 
-              <ul id="inner">
-                <li>Advanced programming (C++)</li>
-                <li>Object oriented programming (Java)</li>
-                <li>Programming in web environment (PHP)</li>
-                <li>Frontend web development (HTML, CSS)</li>
-              </ul>
-            </li>
-          </ul>
-        </article>
-        <article class="right-article">
-          <p class="head-article">Lecturer</p>
-          <p>Payame Noor University, Iran| Aug 2010 to Sep 2016</p>
-          <ul>
-            <li>Advanced Computer networks</li>
-            <li>Advanced programming( C++)</li>
-            <li>Machine language and assembly</li>
-          </ul>
-        </article>
-        <div class="clear"></div>
-        <article>
-          <p class="head-article">Freelance programming 2009</p>
-          <p>
+        <h3 class="subhead-sec"></h3>
+        <div id="accordion">
+          <h3><a href="#">Faculty Member</a></h3>
+          <div>
+            <p>Islamic Azad University, Iran| Aug 2009 to Mar 2018</p>
+            <ul>
+              <li>
+                Provided instruction on creating a website from start to finish
+                for 20+ students per semester
+              </li>
+              <li>
+                Supervised and examined students' project work to ensure
+                efficient technical ability by using JavaScrip, HTML, CSS, PHP
+              </li>
+              <li>
+                Taught some lessons such as:
+
+                <ul id="inner">
+                  <li>Advanced programming (C++)</li>
+                  <li>Object oriented programming (Java)</li>
+                  <li>Programming in web environment (PHP)</li>
+                  <li>Frontend web development (HTML, CSS)</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <h3><a href="#">Freelance programming 2009</a></h3>
+          <div>
             Performed mathematical functions in an accounting application with
             Java language.
-          </p>
-        </article>
-        <div class="clear"></div>
-        <article class="right-article">
-          <p class="head-article">Final project for master 2009</p>
-          <p>
+          </div>
+          <h3><a href="#">Final project for master 2009</a></h3>
+          <div>
             Studied and proposed a novel improved QOS ODMRP protocol in Adhoc
             networks. Implemented simulation of the protocol in Glomosim
             application by C++ language. The simulation demonstrated that QOS
             was upgraded in this protocol.
-          </p>
-        </article>
+          </div>
+        </div>
+
         <div class="clear"></div>
       </div>
     </section>
@@ -152,29 +137,41 @@
     <section id="education">
       <div class="container">
         <h2 class="head-sec">Education/Certificates</h2>
-        <hr class="split" />
-        <h3 class="subhead-sec">Education</h3>
-        <ul>
-          <li>
-            Master of Science in Computer Engineering<br />
-            <p>
-              Islamic Azad University, Science and research Branch, Tehran, Iran
-            </p>
-          </li>
-          <li>
-            Bachelor of Science in Computer Engineering <br />
-            <p>Islamic Azad University, Najafabad Branch, Esfahan, Iran</p>
-          </li>
-        </ul>
-        <h3 class="subhead-sec">Certificates</h3>
-        <ul>
-          <li>JQuery in Web Publishing<br />By BCIT| 2022</li>
-          <li>Object Oriented Programming in Java<br />By Microsoft| 2019</li>
-          <li>
-            Introduction to Mobile Application Development using Android<br />By
-            Hong Kong University| 2019
-          </li>
-        </ul>
+
+        <div id="tabs">
+          <ul>
+            <li><a href="#tabs-1">Education</a></li>
+            <li><a href="#tabs-2">Certificates</a></li>
+          </ul>
+
+          <div id="tabs-1">
+            <ul>
+              <li>
+                Master of Science in Computer Engineering<br />
+                <p>
+                  Islamic Azad University, Science and research Branch, Tehran,
+                  Iran
+                </p>
+              </li>
+              <li>
+                Bachelor of Science in Computer Engineering <br />
+                <p>Islamic Azad University, Najafabad Branch, Esfahan, Iran</p>
+              </li>
+            </ul>
+          </div>
+          <div id="tabs-2">
+            <ul>
+              <li>JQuery in Web Publishing<br />By BCIT| 2022</li>
+              <li>
+                Object Oriented Programming in Java<br />By Microsoft| 2019
+              </li>
+              <li>
+                Introduction to Mobile Application Development using Android<br />By
+                Hong Kong University| 2019
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
     <section id="contact">
@@ -189,27 +186,5 @@
     <footer>
       <p>Designed by Maryam Shamaei</p>
     </footer>
-    <script>
-      var typed = new Typed("#t1", {
-        strings: ["MARYAM SHAMAEI"],
-        showCursor: false,
-        typeSpeed: 60,
-      });
-    </script>
-
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
-    <script type="text/javascript" src="JS/slick/slick.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".project").slick({});
-      });
-    </script>
   </body>
 </html>
